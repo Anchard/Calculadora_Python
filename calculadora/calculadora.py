@@ -39,39 +39,6 @@ def leitor():
     
     return entrada
 
-#Faço uma nova lista com as operações prioritárias no inicio da lista
-def prioridade(lista):
-    tamanho = len(lista)
-    nova_lista = [''] * tamanho
-    auxiliar = [''] * tamanho
-    f = 1
-    
-    for i in range(1, tamanho):
-        if lista[i] == 'sq' or lista[i] == '**':
-            auxiliar[f - 1] = lista[i - 1]
-            auxiliar[f] = lista[i]
-            auxiliar[f + 1] = lista[i + 1]
-            f += 2
-
-    
-    for i in range(1, tamanho):
-        if lista[i] == '*' or lista[i] == '/':
-            auxiliar[f - 1] = lista[i - 1]
-            auxiliar[f] = lista[i]
-            auxiliar[f + 1] = lista[i + 1]
-            f += 2
-
-    for i in range(1, tamanho):
-        if lista[i] == '+' or lista[i] == '-':
-            auxiliar[f - 1] = lista[i - 1]
-            auxiliar[f] = lista[i]
-            auxiliar[f + 1] = lista[i + 1]
-            f += 2
-            
-    print(auxiliar)
-    return auxiliar 
-
-
 def menu():
     print('Instruções de utilização: ')
     print('Digite um número, a operação suportada e outro número')
