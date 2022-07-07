@@ -46,18 +46,6 @@ def menu():
     print('Operações suportadas: +, -, *, /, **')
     print('Para sair digite: exit\n')
 
-def soma(x, y):
-    return x + y
-
-def subtracao(x, y):
-    return x - y
-
-def multiplicacao(x, y):
-    return x * y
-
-def potenciacao(x, f):
-    return x ** f
-
 #removo os tokens adicionados com a efetuação das operações prioritárias
 def renova_lista(lista):
     nova_lista = []
